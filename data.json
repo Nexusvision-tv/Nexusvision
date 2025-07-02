@@ -1,0 +1,127 @@
+{
+  "navLinks": [
+    { "href": "#why-us", "text": "Why Us?" },
+    { "href": "#plans", "text": "Service Plans" },
+    { "href": "#guides", "text": "Setup Guides" }
+  ],
+  "features": [
+    { "icon": "bi-hdd-stack-fill", "count": 99.9, "title": "% Stream Stability", "text": "We provide robust configurations ensuring your data streams are stable and reliable." },
+    { "icon": "bi-device-ssd", "count": 24, "title": "Hour Setup Delivery", "text": "Receive your personalized configuration file via email within 24 hours of payment." },
+    { "icon": "bi-headset", "count": 24, "title": "/7 Expert Support", "text": "Our technical team is always available to help you with installation and troubleshooting." }
+  ],
+  "pricingPlans": {
+    "personal": [
+      {
+        "id": "personal_3m",
+        "name": "Standard Access",
+        "price": "25",
+        "billing": "billed quarterly",
+        "description": "Perfect for individuals wanting a stable, high-quality experience.",
+        "popular": false,
+        "features": [
+          "Global Content Access",
+          "VOD Library Config",
+          "Standard Support"
+        ],
+        "ratings": {
+          "Performance": 4,
+          "Support": 4,
+          "Devices": 1
+        }
+      },
+      {
+        "id": "personal_12m",
+        "name": "Premium Access",
+        "price": "60",
+        "billing": "billed annually",
+        "description": "The best value and performance for the dedicated user.",
+        "popular": true,
+        "features": [
+          "<strong>Everything in Standard, plus:</strong>",
+          "Premium Sports & Events",
+          "Priority VIP Support"
+        ],
+        "ratings": {
+          "Performance": 5,
+          "Support": 5,
+          "Devices": 2
+        }
+      },
+      {
+        "id": "personal_1m",
+        "name": "Basic Access",
+        "price": "10",
+        "billing": "billed monthly",
+        "description": "A great way to test our premium service commitment-free.",
+        "popular": false,
+        "features": [
+          "Global Content Access",
+          "VOD Library Config",
+          "Standard Support"
+        ],
+        "ratings": {
+          "Performance": 4,
+          "Support": 4,
+          "Devices": 1
+        }
+      }
+    ],
+    "family": [
+       {
+        "id": "family_3m",
+        "name": "Family Standard",
+        "price": "40",
+        "billing": "billed quarterly",
+        "description": "Great for small families or sharing with a friend.",
+        "popular": false,
+        "features": [
+          "Global Content Access",
+          "VOD Library Config",
+          "Standard Support"
+        ],
+        "ratings": {
+          "Performance": 4,
+          "Support": 4,
+          "Devices": 3
+        }
+      },
+      {
+        "id": "family_12m",
+        "name": "Family Premium",
+        "price": "85",
+        "billing": "billed annually",
+        "description": "The ultimate solution for the whole family, across all devices.",
+        "popular": true,
+        "features": [
+          "<strong>Everything in Standard, plus:</strong>",
+          "Premium Sports & Events",
+          "Priority VIP Support"
+        ],
+        "ratings": {
+          "Performance": 5,
+          "Support": 5,
+          "Devices": 5
+        }
+      }
+    ]
+  },
+  "faq": [
+    {
+      "question": "What am I actually purchasing?",
+      "answer": "You are purchasing a <mark>service</mark> where we provide you with a personalized configuration file and dedicated technical support to help you set up and access third-party digital media streams on your devices. <mark>We do not host, control, or own any content.</mark>",
+      "openByDefault": true
+    },
+    {
+      "question": "Is this service legal?",
+      "answer": "Our configuration and support service is <mark>100% legal</mark>. It is the end-user's responsibility to ensure they have the rights to access the content they are viewing. We provide a technical means of access, but do not verify the copyright status of third-party streams."
+    },
+    {
+      "question": "What happens after I pay?",
+      "answer": "After a successful payment, you will receive an email within 24 hours containing your unique <mark>configuration file</mark> and simple, step-by-step instructions for all major devices. Our support team is available if you need any help."
+    },
+    {
+      "question": "Do I need a VPN?",
+      "answer": "For your <mark>privacy and security</mark>, and to bypass any potential geo-restrictions on content, we always <mark>highly recommend using a trusted VPN service</mark>. Our configurations are fully compatible with all major VPNs."
+    }
+  ]
+}
