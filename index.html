@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexusVision - The Premier Digital Configuration Service</title>
+    <meta name="description" content="Tired of unreliable streams and endless pop-ups? NexusVision offers a premium, stable, and ad-free configuration service for all your devices.">
+
+    <link rel="stylesheet" href="css/main.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body data-spy="scroll" data-target=".main-nav">
+    <div class="background-gradient"></div>
+    <div id="proof-notifications-container"></div>
+    <div id="exitIntentModal" class="modal-overlay exit-intent-modal"></div>
+
+    <header class="header">
+        <div class="container navbar">
+            <a href="index.html" class="logo">Nexus<span>Vision</span></a>
+            <nav class="main-nav"></nav>
+            <a href="auth.html" class="btn btn-primary btn-shine" data-magnetic>Client Login</a>
+            <button class="mobile-nav-toggle" aria-label="Open navigation menu"><i class="bi bi-list"></i></button>
+        </div>
+    </header>
+
+    <nav class="mobile-nav"></nav>
+    
+    <main>
+        <section class="hero" id="home">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 data-aos="fade-up">The Streaming Experience You Deserve. Finally.</h1>
+                    <p data-aos="fade-up" data-aos-delay="150">Tired of unreliable streams, endless pop-ups, and non-existent support? NexusVision provides a premium, stable, and ad-free configuration service, delivered by experts.</p>
+                    <div class="hero-buttons" data-aos="fade-up" data-aos-delay="300">
+                        <a href="#plans" class="btn btn-primary btn-shine" data-magnetic>View Service Plans</a>
+                    </div>
+                    <div class="trust-badges" data-aos="fade-up" data-aos-delay="450">
+                        <div class="badge"><i class="bi bi-shield-check-fill"></i> Secure Payments</div>
+                        <div class="badge"><i class="bi bi-headset"></i> 24/7 Expert Support</div>
+                        <div class="badge"><i class="bi bi-badge-ad-fill"></i> 100% Ad-Free Experience</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="why-us" id="why-us">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="section-title-small">THE NEXUSVISION DIFFERENCE</h2>
+                    <p class="section-subtitle">Why settle for less when you can have the best?</p>
+                </div>
+                <div class="why-us-grid">
+                    <div class="why-us-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card-icon"><i class="bi bi-broadcast"></i></div>
+                        <h3>Unmatched Stability</h3>
+                        <p>We configure access to enterprise-grade streams with 99.9% uptime. No more buffering during the big game.</p>
+                    </div>
+                    <div class="why-us-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card-icon"><i class="bi bi-shield-x"></i></div>
+                        <h3>Zero Ads or Pop-ups</h3>
+                        <p>Our service provides a clean, uninterrupted viewing experience. Your focus is on the content, not closing ads.</p>
+                    </div>
+                    <div class="why-us-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="card-icon"><i class="bi bi-people-fill"></i></div>
+                        <h3>Real, Human Support</h3>
+                        <p>Stuck on setup? Our expert team is available 24/7 on Telegram & WhatsApp to guide you personally.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+       
+        <section class="pricing" id="plans">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="section-title-small">SERVICE PLANS</h2>
+                    <p class="section-subtitle">Simple, transparent plans for every need.</p>
+                </div>
+                <div class="pricing-toggle-container" data-aos="fade-up">
+                    <button class="plan-toggle-btn active" data-plan-type="personal">Personal Use</button>
+                    <button class="plan-toggle-btn" data-plan-type="family">Family Plan</button>
+                </div>
+                <div class="pricing-grid" id="pricing-grid">
+                    <!-- Pricing cards will be injected here by JS -->
+                </div>
+                 <div class="guarantee-box" data-aos="fade-up">
+                    <i class="bi bi-shield-check"></i>
+                    <div><h4>Our Guarantee</h4><p>We stand by our service. If you're not 100% satisfied within the first 7 days, we'll provide a full refund, no questions asked.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="guides-preview" id="guides">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                     <h2 class="section-title-small">EASY SETUP ON ANY DEVICE</h2>
+                     <p class="section-subtitle">Our step-by-step guides make installation a breeze.</p>
+                </div>
+                <div class="guides-grid">
+                    <div class="guide-card" data-aos="fade-up" data-aos-delay="100"><span>For</span><i class="bi bi-tv-fill"></i><h4>Smart TV</h4></div>
+                    <div class="guide-card" data-aos="fade-up" data-aos-delay="150"><span>For</span><i class="bi bi-fire"></i><h4>Firestick</h4></div>
+                    <div class="guide-card" data-aos="fade-up" data-aos-delay="200"><span>For</span><i class="bi bi-google-play"></i><h4>Android Box</h4></div>
+                    <div class="guide-card" data-aos="fade-up" data-aos-delay="250"><span>For</span><i class="bi bi-apple"></i><h4>Apple TV</h4></div>
+                    <div class="guide-card" data-aos="fade-up" data-aos-delay="300"><span>For</span><i class="bi bi-phone-fill"></i><h4>Mobile</h4></div>
+                </div>
+                 <div class="support-cta-box" data-aos="fade-up">
+                    <h3>Need Personal Assistance?</h3>
+                    <p>Our team can even walk you through the setup process live.</p>
+                    <a href="#" class="btn btn-secondary">Contact Support</a>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <a href="index.html" class="logo">Nexus<span>Vision</span></a>
+                <p class="footer-tagline">The premium streaming experience, finally perfected.</p>
+                <div class="footer-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="contact.html">Contact Us</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 NexusVision. All Rights Reserved.</p>
+                <p class="disclaimer">NexusVision is a configuration and support service. We do not host or provide any media content.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>
