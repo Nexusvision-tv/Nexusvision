@@ -1,0 +1,284 @@
+/* --- PRESTIGE EDITION STYLESHEET (V10) --- */
+
+/* 1. ROOT VARIABLES & GLOBAL RESET */
+:root {
+    --primary-glow: #00f2ea;
+    --secondary-accent: #d4af37; /* Gold accent */
+    --bg-dark: #050505; /* Matt black */
+    --bg-light: #111111;
+    --bg-card: #191919;
+    --text-light: #f5f5f7;
+    --text-gray: #86868b;
+    --border-color: rgba(255, 255, 255, 0.1);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+body {
+    font-family: 'Manrope', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+/* 2. BACKGROUND & GENERAL UI */
+.background-gradient {
+    position: fixed;
+    width: 600px;
+    height: 600px;
+    top: -200px;
+    left: -200px;
+    background: radial-gradient(circle, rgba(0, 242, 234, 0.1), transparent 70%);
+    animation: move-gradient 20s infinite alternate;
+    z-index: -1;
+}
+@keyframes move-gradient {
+    from { transform: translate(0, 0); }
+    to { transform: translate(100vw, 100vh); }
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 32px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+.btn-primary {
+    background: var(--primary-glow);
+    color: #000;
+}
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 242, 234, 0.2);
+}
+.btn-secondary {
+    background-color: transparent;
+    color: var(--text-light);
+    border-color: var(--border-color);
+}
+.btn-secondary:hover {
+    background-color: var(--text-light);
+    color: var(--bg-dark);
+}
+
+/* 3. HEADER */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    z-index: 1000;
+    background: transparent;
+    transition: all 0.4s ease;
+}
+.header.scrolled {
+    background-color: rgba(5, 5, 5, 0.5);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-color);
+}
+.navbar { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-size: 1.8rem; font-weight: 800; color: var(--text-light); text-decoration: none; }
+.logo span { color: var(--primary-glow); }
+.main-nav { display: flex; gap: 35px; align-items: center; }
+/* ... (mobile nav styles from previous versions can be added here) ... */
+
+/* 4. HERO SECTION */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding-top: 100px;
+}
+.hero-content h1 {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 800;
+    letter-spacing: -2px;
+    max-width: 900px;
+    margin: 0 auto 20px auto;
+    line-height: 1.1;
+}
+.hero-content p {
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    color: var(--text-gray);
+}
+.trust-badges {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 60px;
+    color: var(--text-gray);
+}
+.badge { display: flex; align-items: center; gap: 8px; font-weight: 500; }
+.badge i { color: var(--primary-glow); }
+
+/* GENERAL SECTION STYLING */
+section { padding: 100px 0; }
+.section-title-small {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--primary-glow);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+.section-subtitle {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    color: var(--text-light);
+    max-width: 600px;
+    margin: 0 auto;
+}
+.section-header { text-align: center; margin-bottom: 60px; }
+
+/* 5. WHY-US SECTION */
+.why-us { background-color: var(--bg-light); }
+.why-us-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+.why-us-card {
+    background-color: var(--bg-card);
+    padding: 40px;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.why-us-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+.card-icon {
+    font-size: 2.5rem;
+    color: var(--primary-glow);
+    margin-bottom: 20px;
+}
+.why-us-card h3 { font-size: 1.5rem; margin-bottom: 10px; }
+.why-us-card p { color: var(--text-gray); }
+
+/* 6. PRICING SECTION */
+.pricing { background-color: var(--bg-dark); }
+.pricing-toggle-container {
+    display: flex;
+    justify-content: center;
+    background: var(--bg-card);
+    border-radius: 10px;
+    padding: 5px;
+    width: fit-content;
+    margin: 0 auto 40px auto;
+}
+.plan-toggle-btn {
+    padding: 10px 25px;
+    border: none;
+    background: transparent;
+    color: var(--text-gray);
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+.plan-toggle-btn.active {
+    background: var(--primary-glow);
+    color: var(--bg-dark);
+}
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    align-items: stretch;
+}
+/* Pricing Card styles will be added in a future step */
+.guarantee-box {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    padding: 25px;
+    border-radius: 12px;
+    margin-top: 60px;
+}
+.guarantee-box i { font-size: 3rem; color: var(--primary-glow); }
+.guarantee-box h4 { font-size: 1.3rem; margin: 0 0 5px 0; color: var(--text-light); }
+.guarantee-box p { margin: 0; color: var(--text-gray); }
+
+/* 7. GUIDES PREVIEW SECTION */
+.guides-preview { background-color: var(--bg-light); }
+.guides-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+.guide-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    width: 150px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.guide-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-glow);
+}
+.guide-card span {
+    font-size: 0.8rem;
+    color: var(--text-gray);
+}
+.guide-card i {
+    font-size: 3rem;
+    color: var(--primary-glow);
+    display: block;
+    margin: 10px 0;
+}
+.guide-card h4 { font-size: 1.1rem; }
+.support-cta-box {
+    text-align: center;
+    padding: 40px 20px;
+    background: var(--bg-card);
+    border-radius: 16px;
+}
+.support-cta-box h3 { font-size: 1.8rem; margin-bottom: 10px; }
+.support-cta-box p { color: var(--text-gray); margin-bottom: 25px; }
+
+
+/* 8. FOOTER */
+.footer {
+    background-color: var(--bg-light);
+    padding: 60px 0 40px;
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+}
+.footer-tagline { color: var(--text-gray); margin: 15px 0 25px 0; }
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+.footer-links a {
+    color: var(--text-gray);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.footer-links a:hover { color: var(--primary-glow); }
+.footer-bottom { border-top: 1px solid var(--border-color); padding-top: 30px; }
+.footer-bottom p { font-size: 0.9rem; color: var(--text-gray); }
+.footer-bottom .disclaimer { font-size: 0.8rem; opacity: 0.7; margin-top: 10px; }
+
+/* ... (Add other necessary styles for modals, proof notifications, etc. from previous versions) ... */
