@@ -1,0 +1,137 @@
+/* --- PRESTIGE EDITION STYLESHEET (V10) --- */
+
+/* 1. ROOT VARIABLES & GLOBAL RESET */
+:root {
+    --primary-glow: #00f2ea;
+    --secondary-accent: #d4af37;
+    --bg-dark: #080808;
+    --bg-light: #121212;
+    --bg-card: #1A1A1A;
+    --text-light: #f5f5f7;
+    --text-gray: #86868b;
+    --text-dark: #1d1d1f;
+    --border-color: rgba(255, 255, 255, 0.1);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+body {
+    font-family: 'Manrope', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+h1, h2, h3, h4 { line-height: 1.2; }
+
+/* 2. BACKGROUND & GENERAL UI */
+.background-gradient {
+    position: fixed;
+    width: 800px;
+    height: 800px;
+    top: -300px;
+    left: -300px;
+    background: radial-gradient(circle, rgba(0, 242, 234, 0.08), transparent 60%);
+    animation: move-gradient 25s infinite alternate ease-in-out;
+    z-index: -2;
+}
+@keyframes move-gradient {
+    from { transform: translate(0, 0) rotate(0deg); }
+    to { transform: translate(80vw, 60vh) rotate(360deg); }
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 32px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+.btn-primary { background: var(--primary-glow); color: var(--text-dark); }
+.btn-primary:hover { transform: translateY(-3px) scale(1.05); box-shadow: 0 10px 20px rgba(0, 242, 234, 0.2); }
+.btn-secondary { background-color: rgba(255, 255, 255, 0.1); color: var(--text-light); }
+.btn-secondary:hover { background-color: var(--text-light); color: var(--bg-dark); }
+
+/* 3. HEADER */
+.header { position: fixed; top: 0; left: 0; width: 100%; padding: 20px 0; z-index: 1000; background: transparent; transition: background-color 0.4s ease, backdrop-filter 0.4s ease; }
+.header.scrolled { background-color: rgba(8, 8, 8, 0.7); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--border-color); }
+.navbar { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-size: 1.8rem; font-weight: 800; color: var(--text-light); text-decoration: none; letter-spacing: -1px; }
+.logo span { color: var(--primary-glow); }
+/* Mobile nav, etc. styles will be added if needed, kept minimal for now */
+
+/* 4. HERO SECTION */
+.hero { min-height: 90vh; display: flex; align-items: center; text-align: center; padding: 120px 0 60px 0; }
+.hero-content h1 { font-size: clamp(2.8rem, 6vw, 4.5rem); font-weight: 800; letter-spacing: -0.04em; max-width: 900px; margin: 0 auto 25px auto; line-height: 1.1; }
+.hero-content p { font-size: clamp(1.1rem, 2.5vw, 1.25rem); max-width: 700px; margin: 0 auto 40px auto; color: var(--text-gray); }
+.trust-badges { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-top: 60px; color: var(--text-gray); }
+.badge { display: flex; align-items: center; gap: 10px; font-weight: 500; font-size: 0.9rem; }
+.badge i { color: var(--primary-glow); font-size: 1.2rem; }
+
+/* 5. GENERAL SECTION STYLING */
+section { padding: 120px 0; }
+.section-header { text-align: center; margin-bottom: 70px; }
+.section-title-small { font-size: 0.9rem; font-weight: 700; color: var(--primary-glow); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 15px; }
+.section-subtitle { font-size: clamp(2.2rem, 5vw, 3.2rem); font-weight: 800; color: var(--text-light); max-width: 700px; margin: 0 auto; letter-spacing: -0.03em; }
+
+/* 6. WHY-US SECTION */
+.why-us { background-color: var(--bg-light); }
+.why-us-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+.why-us-card { background-color: var(--bg-dark); padding: 40px; border-radius: 16px; border: 1px solid var(--border-color); text-align: center; transition: transform 0.3s, box-shadow 0.3s; }
+.why-us-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
+.card-icon { font-size: 2.5rem; color: var(--primary-glow); margin-bottom: 20px; }
+.why-us-card h3 { font-size: 1.5rem; margin-bottom: 10px; }
+.why-us-card p { color: var(--text-gray); }
+
+/* 7. PRICING SECTION */
+.pricing { background-color: var(--bg-dark); }
+.pricing-toggle-container { display: flex; justify-content: center; background: var(--bg-light); border-radius: 10px; padding: 5px; width: fit-content; margin: 0 auto 50px auto; border: 1px solid var(--border-color); }
+.plan-toggle-btn { padding: 10px 25px; border: none; background: transparent; color: var(--text-gray); font-weight: 600; cursor: pointer; border-radius: 8px; transition: all 0.3s; }
+.plan-toggle-btn.active { background: var(--primary-glow); color: var(--bg-dark); }
+.pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 30px; align-items: stretch; transition: opacity 0.3s; }
+.pricing-grid.fading-out { opacity: 0; }
+.pricing-card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 20px; padding: 40px; display: flex; flex-direction: column; position: relative; overflow: hidden; }
+.pricing-card.popular { border-color: var(--primary-glow); box-shadow: 0 0 30px rgba(0, 242, 234, 0.1); }
+.popular-badge { position: absolute; top: 20px; right: 20px; background-color: var(--primary-glow); color: var(--text-dark); padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; }
+.plan-name { font-size: 1.8rem; font-weight: 800; }
+.plan-description { color: var(--text-gray); margin-bottom: 30px; min-height: 40px; }
+.price-section { display: flex; align-items: baseline; margin-bottom: 30px; }
+.price-currency { font-size: 1.5rem; font-weight: 600; color: var(--primary-glow); margin-right: 2px; }
+.price-amount { font-size: 4rem; font-weight: 800; line-height: 1; }
+.price-billing { color: var(--text-gray); margin-left: 10px; }
+.features-list { list-style: none; padding: 0; margin-bottom: 30px; }
+.features-list li { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+.features-list i { color: var(--primary-glow); }
+.ratings-section { border-top: 1px solid var(--border-color); padding-top: 20px; margin-top: auto; }
+.rating-item { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+.rating-label { font-weight: 500; }
+.rating-stars { color: var(--secondary-accent); }
+.rating-stars .bi-star { opacity: 0.3; }
+.pricing-card .btn { width: 100%; margin-top: 30px; }
+
+/* 8. GUIDES PREVIEW SECTION */
+.guides-preview { background-color: var(--bg-light); text-align: center; }
+.guides-grid { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 50px; }
+.guide-card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px; padding: 20px; width: 150px; transition: transform 0.3s, box-shadow 0.3s; }
+.guide-card:hover { transform: translateY(-5px); border-color: var(--primary-glow); }
+.guide-card span { font-size: 0.8rem; color: var(--text-gray); }
+.guide-card i { font-size: 3rem; color: var(--primary-glow); display: block; margin: 10px 0; }
+.guide-card h4 { font-size: 1.1rem; }
+.support-cta-box { margin-top: 60px; }
+.support-cta-box h3 { font-size: 1.8rem; margin-bottom: 10px; }
+.support-cta-box p { color: var(--text-gray); margin-bottom: 25px; }
+
+/* 9. FOOTER */
+.footer { background-color: var(--bg-dark); padding: 60px 0 40px; text-align: center; }
+.footer-content { border-bottom: 1px solid var(--border-color); padding-bottom: 40px; margin-bottom: 40px; }
+.footer-tagline { color: var(--text-gray); margin: 15px 0 25px 0; }
+.footer-links { display: flex; justify-content: center; gap: 30px; }
+.footer-links a { color: var(--text-gray); text-decoration: none; transition: color 0.3s; }
+.footer-links a:hover { color: var(--primary-glow); }
+.footer-bottom p { font-size: 0.9rem; color: var(--text-gray); }
+.footer-bottom .disclaimer { font-size: 0.8rem; opacity: 0.7; margin-top: 10px; max-width: 600px; margin-left: auto; margin-right: auto; }
+
+/* Add other component styles (modals, etc.) as needed */
