@@ -21,7 +21,7 @@ class App {
             await new Promise(resolve => onReady(resolve));
             
             // Fetch the main data for the application
-            const data = await this.fetchData('../data.json');
+            const data = await this.fetchData('data.json'); 
             
             // Initialize all components with the data they need
             this.initComponents(data);
