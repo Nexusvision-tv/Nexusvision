@@ -173,7 +173,8 @@ class AuthPage {
      */
     async apiCall(endpoint, method, body) {
         // IMPORTANT: Replace with your deployed backend URL in a real project
-        const API_URL = 'http://localhost:3000/api'; 
+        
+const API_URL = 'https://lyrical-splashy-helium.glitch.me/api'; 
         
         const response = await fetch(`${API_URL}/${endpoint}`, {
             method: method,
