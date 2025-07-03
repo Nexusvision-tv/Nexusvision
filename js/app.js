@@ -1,4 +1,4 @@
-import { onReady } from './utils.js';
+import { onReady } from '../utils.js'; // <-- L'7EL L'SAHIH
 import { initializeAnimations } from './components/animations.js';
 import { Header } from './components/header.js';
 import { Pricing } from './components/pricing.js';
